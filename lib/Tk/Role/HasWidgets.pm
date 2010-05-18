@@ -52,14 +52,17 @@ __END__
 
 =head1 DESCRIPTION
 
-When programming C<Tk>, it's almost always a good idea to keep a
+When programming L<Tk>, it's almost always a good idea to keep a
 reference to the widgets that you created in the interface. Most of the
 time, a simple hash is enough; but it is usually wreapped up in methods
 to make the hash private to the window object. And of course, those
 methods are duplicated in all modules, under a form or another.
 
-Since duplication is bad, this module implements a role implementing
-those methods once and forever.
+Since duplication is bad, this module implements a L<Moose> role
+implementing those methods once and forever. This implies that your
+class is using L<Moose> in order to consume the role.
+
+
 
 
 =head2 About the method names
