@@ -35,6 +35,7 @@ has _widgets => (
     },
 );
 
+no Moose::Role;
 1;
 __END__
 
