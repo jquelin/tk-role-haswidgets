@@ -5,7 +5,7 @@ use warnings;
 package Tk::Role::HasWidgets;
 # ABSTRACT: keep track of your tk widgets
 
-use Moose::Role;
+use Moose::Role 0.92;
 use MooseX::Has::Sugar;
 
 
