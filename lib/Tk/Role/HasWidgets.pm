@@ -38,7 +38,36 @@ has _widgets => (
 1;
 __END__
 
+=head1 SYNOPSIS
+
+    package Your::Tk::Window::Class;
+
+    use Moose;
+    with 'Tk::Role::HasWidgets';
+
+    # later on, in one of the methods
+    $self->_w( 'my_button' )->configure( ... );
+
+
 =head1 DESCRIPTION
+
+When programming C<Tk>, it's almost always a good idea to keep a
+reference to the widgets that you created in the interface. Most of the
+time, a simple hash is enough; but it is usually wreapped up in methods
+to make the hash private to the window object. And of course, those
+methods are duplicated in all modules, under a form or another.
+
+Since duplication is bad, this module implements a role implementing
+those methods once and forever.
+
+
+=head2 About the method names
+
+The methods featured in this role begin with C<_>, that is, they are
+following Perl convention of private methods. This is on purpose:
+remember that this method is a role, consumed by your class. And you
+don't want those methods to be available outside of the window
+class, do you?
 
 
 
