@@ -1,27 +1,25 @@
+#
+# This file is part of Tk-Role-HasWidgets
+#
+# This software is copyright (c) 2010 by Jerome Quelin.
+#
+# This is free software; you can redistribute it and/or modify it under
+# the same terms as the Perl 5 programming language system itself.
+#
 use 5.010;
 use strict;
 use warnings;
 
 package Tk::Role::HasWidgets;
+BEGIN {
+  $Tk::Role::HasWidgets::VERSION = '1.111050';
+}
 # ABSTRACT: keep track of your tk widgets
 
 use Moose::Role 0.92;
 use MooseX::Has::Sugar;
 
 
-=method _set_w
-
-    $object->_set_w( $name, $widget );
-
-Store a reference to C<$widget> and associate it to C<$name>.
-
-=method _w
-
-    my $widget = $object->_w( $name );
-
-Get back the C<$widget> reference associated to C<$name>.
-
-=cut
 
 # a hash to store the widgets for easier reference.
 has _widgets => (
@@ -37,7 +35,17 @@ has _widgets => (
 
 no Moose::Role;
 1;
-__END__
+
+
+=pod
+
+=head1 NAME
+
+Tk::Role::HasWidgets - keep track of your tk widgets
+
+=head1 VERSION
+
+version 1.111050
 
 =head1 SYNOPSIS
 
@@ -48,7 +56,6 @@ __END__
 
     # later on, in one of the methods
     $self->_w( 'my_button' )->configure( ... );
-
 
 =head1 DESCRIPTION
 
@@ -62,8 +69,6 @@ Since duplication is bad, this module implements a L<Moose> role
 implementing those methods once and forever. This implies that your
 class is using L<Moose> in order to consume the role.
 
-
-
 =head2 About the method names
 
 The methods featured in this role begin with C<_>, that is, they are
@@ -72,7 +77,19 @@ remember that this method is a role, consumed by your class. And you
 don't want those methods to be available outside of the window
 class, do you?
 
+=head1 METHODS
 
+=head2 _set_w
+
+    $object->_set_w( $name, $widget );
+
+Store a reference to C<$widget> and associate it to C<$name>.
+
+=head2 _w
+
+    my $widget = $object->_w( $name );
+
+Get back the C<$widget> reference associated to C<$name>.
 
 =head1 SEE ALSO
 
@@ -101,3 +118,20 @@ L<http://annocpan.org/dist/Tk-Role-HasWidgets>
 L<http://cpanratings.perl.org/d/Tk-Role-HasWidgets>
 
 =back
+
+=head1 AUTHOR
+
+Jerome Quelin
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2010 by Jerome Quelin.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
+=cut
+
+
+__END__
+
