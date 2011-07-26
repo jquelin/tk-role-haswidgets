@@ -12,7 +12,7 @@ use warnings;
 
 package Tk::Role::HasWidgets;
 BEGIN {
-  $Tk::Role::HasWidgets::VERSION = '1.111050';
+  $Tk::Role::HasWidgets::VERSION = '1.112070';
 }
 # ABSTRACT: keep track of your tk widgets
 
@@ -30,6 +30,7 @@ has _widgets => (
     handles => {
         _set_w => 'set',
         _w     => 'get',
+        _del_w => 'delete',
     },
 );
 
@@ -45,7 +46,7 @@ Tk::Role::HasWidgets - keep track of your tk widgets
 
 =head1 VERSION
 
-version 1.111050
+version 1.112070
 
 =head1 SYNOPSIS
 
@@ -54,8 +55,14 @@ version 1.111050
     use Moose;
     with 'Tk::Role::HasWidgets';
 
+    # store a button
+    $self->_set_w( my_button => $button );
+
     # later on, in one of the methods
     $self->_w( 'my_button' )->configure( ... );
+
+    # when no longer needed:
+    $self->_del_w( 'my_button' );
 
 =head1 DESCRIPTION
 
@@ -90,6 +97,12 @@ Store a reference to C<$widget> and associate it to C<$name>.
     my $widget = $object->_w( $name );
 
 Get back the C<$widget> reference associated to C<$name>.
+
+=head2 _del_w
+
+    $object->_del_w( $name );
+
+Delete the C<$name> reference to a widget.
 
 =head1 SEE ALSO
 

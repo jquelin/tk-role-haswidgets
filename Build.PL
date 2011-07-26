@@ -20,7 +20,7 @@ my %module_build_args = (
     'Jerome Quelin'
   ],
   'dist_name' => 'Tk-Role-HasWidgets',
-  'dist_version' => '1.111050',
+  'dist_version' => '1.112070',
   'license' => 'perl',
   'module_name' => 'Tk::Role::HasWidgets',
   'recommends' => {},
