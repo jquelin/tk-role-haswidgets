@@ -1,6 +1,7 @@
 Revision history for Tk::Role::HasWidgets.
 
 {{$NEXT}}
+ - new method: _del_w()
 
 1.111050  2011-04-15 10:12:31 Europe/Paris
  - original version

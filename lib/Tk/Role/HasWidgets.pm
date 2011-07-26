@@ -21,6 +21,12 @@ Store a reference to C<$widget> and associate it to C<$name>.
 
 Get back the C<$widget> reference associated to C<$name>.
 
+=method _del_w
+
+    $object->_del_w( $name );
+
+Delete the C<$name> reference to a widget.
+
 =cut
 
 # a hash to store the widgets for easier reference.
@@ -32,6 +38,7 @@ has _widgets => (
     handles => {
         _set_w => 'set',
         _w     => 'get',
+        _del_w => 'delete',
     },
 );
 
@@ -46,8 +53,14 @@ __END__
     use Moose;
     with 'Tk::Role::HasWidgets';
 
+    # store a button
+    $self->_set_w( my_button => $button );
+
     # later on, in one of the methods
     $self->_w( 'my_button' )->configure( ... );
+
+    # when no longer needed:
+    $self->_del_w( 'my_button' );
 
 
 =head1 DESCRIPTION
