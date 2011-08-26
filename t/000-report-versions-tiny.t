@@ -54,6 +54,8 @@ eval { $v .= pmver('Module::Build','0.3601') };
 eval { $v .= pmver('Moose::Role','0.92') };
 eval { $v .= pmver('MooseX::Has::Sugar','any version') };
 eval { $v .= pmver('Test::More','0.88') };
+eval { $v .= pmver('strict','any version') };
+eval { $v .= pmver('warnings','any version') };
 
 
 

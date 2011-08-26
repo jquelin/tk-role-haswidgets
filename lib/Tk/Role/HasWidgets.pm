@@ -11,8 +11,8 @@ use strict;
 use warnings;
 
 package Tk::Role::HasWidgets;
-BEGIN {
-  $Tk::Role::HasWidgets::VERSION = '1.112070';
+{
+  $Tk::Role::HasWidgets::VERSION = '1.112380';
 }
 # ABSTRACT: keep track of your tk widgets
 
@@ -28,9 +28,10 @@ has _widgets => (
     isa     => 'HashRef',
     default => sub { {} },
     handles => {
-        _set_w => 'set',
-        _w     => 'get',
-        _del_w => 'delete',
+        _set_w   => 'set',
+        _w       => 'get',
+        _del_w   => 'delete',
+        _clear_w => 'clear',
     },
 );
 
@@ -46,7 +47,7 @@ Tk::Role::HasWidgets - keep track of your tk widgets
 
 =head1 VERSION
 
-version 1.112070
+version 1.112380
 
 =head1 SYNOPSIS
 
@@ -103,6 +104,10 @@ Get back the C<$widget> reference associated to C<$name>.
     $object->_del_w( $name );
 
 Delete the C<$name> reference to a widget.
+
+=head2 _clear_w
+
+Empty the widget references.
 
 =head1 SEE ALSO
 

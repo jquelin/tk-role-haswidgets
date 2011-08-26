@@ -10,7 +10,7 @@ build_requires:
 configure_requires:
   Module::Build: 0.3601
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.200012, CPAN::Meta::Converter version 2.110930'
+generated_by: 'Dist::Zilla version 4.300000, CPAN::Meta::Converter version 2.112150'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,26 +19,28 @@ name: Tk-Role-HasWidgets
 provides:
   Tk::Role::HasWidgets:
     file: lib/Tk/Role/HasWidgets.pm
-    version: 1.112070
+    version: 1.112380
 requires:
   Moose::Role: 0.92
   MooseX::Has::Sugar: 0
   perl: 5.010
+  strict: 0
+  warnings: 0
 resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Tk-Role-HasWidgets
   homepage: http://search.cpan.org/dist/Tk-Role-HasWidgets/
   repository: git://github.com/jquelin/tk-role-haswidgets.git
-version: 1.112070
+version: 1.112380
 x_Dist_Zilla:
   plugins:
     -
       class: Dist::Zilla::Plugin::AutoVersion
       name: '@JQUELIN/AutoVersion'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::GatherDir
       name: '@JQUELIN/GatherDir'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::CompileTests
       name: '@JQUELIN/CompileTests'
@@ -58,11 +60,11 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PodCoverageTests
       name: '@JQUELIN/PodCoverageTests'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::PodSyntaxTests
       name: '@JQUELIN/PodSyntaxTests'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::ReportVersions::Tiny
       name: '@JQUELIN/ReportVersions::Tiny'
@@ -70,31 +72,31 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::PruneCruft
       name: '@JQUELIN/PruneCruft'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::PruneFiles
       name: '@JQUELIN/PruneFiles'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::ManifestSkip
       name: '@JQUELIN/ManifestSkip'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@JQUELIN/AutoPrereqs'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::ExtraTests
       name: '@JQUELIN/ExtraTests'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::NextRelease
       name: '@JQUELIN/NextRelease'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::PkgVersion
       name: '@JQUELIN/PkgVersion'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::PodWeaver
       name: '@JQUELIN/PodWeaver'
@@ -102,15 +104,15 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Prepender
       name: '@JQUELIN/Prepender'
-      version: 1.103470
+      version: 1.112280
     -
       class: Dist::Zilla::Plugin::ExecDir
       name: '@JQUELIN/ExecDir'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::ShareDir
       name: '@JQUELIN/ShareDir'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::Bugtracker
       name: '@JQUELIN/Bugtracker'
@@ -130,31 +132,31 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::MetaConfig
       name: '@JQUELIN/MetaConfig'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::License
       name: '@JQUELIN/License'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@JQUELIN/MetaYAML'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::MetaJSON
       name: '@JQUELIN/MetaJSON'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::ModuleBuild
       name: '@JQUELIN/ModuleBuild'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::Readme
       name: '@JQUELIN/Readme'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::Manifest
       name: '@JQUELIN/Manifest'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::CheckChangeLog
       name: '@JQUELIN/CheckChangeLog'
@@ -162,57 +164,57 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::Git::Check
       name: '@JQUELIN/Git::Check'
-      version: 1.111590
+      version: 1.112070
     -
       class: Dist::Zilla::Plugin::Git::Commit
       name: '@JQUELIN/Git::Commit'
-      version: 1.111590
+      version: 1.112070
     -
       class: Dist::Zilla::Plugin::Git::CommitBuild
       name: '@JQUELIN/Git::CommitBuild'
-      version: 1.111590
+      version: 1.112070
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@JQUELIN/TagMaster'
-      version: 1.111590
+      version: 1.112070
     -
       class: Dist::Zilla::Plugin::Git::Tag
       name: '@JQUELIN/TagRelease'
-      version: 1.111590
+      version: 1.112070
     -
       class: Dist::Zilla::Plugin::Git::Push
       name: '@JQUELIN/Git::Push'
-      version: 1.111590
+      version: 1.112070
     -
       class: Dist::Zilla::Plugin::UploadToCPAN
       name: '@JQUELIN/UploadToCPAN'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':IncModules'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':TestFiles'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ExecFiles'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':ShareFiles'
-      version: 4.200012
+      version: 4.300000
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':MainModule'
-      version: 4.200012
+      version: 4.300000
   zilla:
     class: Dist::Zilla::Dist::Builder
     config:
       is_trial: 0
-    version: 4.200012
+    version: 4.300000
