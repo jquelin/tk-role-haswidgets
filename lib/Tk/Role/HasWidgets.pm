@@ -27,6 +27,10 @@ Get back the C<$widget> reference associated to C<$name>.
 
 Delete the C<$name> reference to a widget.
 
+=method _clear_w
+
+Empty the widget references.
+
 =cut
 
 # a hash to store the widgets for easier reference.
@@ -36,9 +40,10 @@ has _widgets => (
     isa     => 'HashRef',
     default => sub { {} },
     handles => {
-        _set_w => 'set',
-        _w     => 'get',
-        _del_w => 'delete',
+        _set_w   => 'set',
+        _w       => 'get',
+        _del_w   => 'delete',
+        _clear_w => 'clear',
     },
 );
 
